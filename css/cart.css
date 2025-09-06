@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {  
+  font-family: "Open Sans", sans-serif;
+}
+
+.contenedor-main{
+  max-width: 1200px; 
+  margin: 0 auto;    
+  padding: 0 20px;   
+}
+
+.header-contenido {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+}
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: "Exo 2", sans-serif;;
+  background-color: white;
+  color: black;
+  padding: 5px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.logo img {
+  height: 120px;
+  width: auto;
+}
+
+h1 {
+  margin-left: 5px;
+  margin-right: 380px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: red;
+}
+
+.contenedor-productos-carrito {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.producto {
+  width: 250px; 
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.img-producto img {
+  height: 200px; 
+  object-fit: contain; 
+  border-radius: 8px;
+}
+
+.btn-eliminar {
+  background: #b80000;         
+  color: #fff;                 
+  border: none;
+  padding: 12px 20px;
+  margin: 10px;  
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+.btn-eliminar:hover {
+  background: #e60000;       
+  transform: translateY(-2px); 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.btn-eliminar:active {
+  background: #990000;         
+  transform: scale(0.95);      
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btn-clear {
+  background: #b80000;         
+  color: #fff;                 
+  border: none;
+  padding: 12px 20px;
+  margin: 10px;  
+  margin-top: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+.btn-clear:hover {
+  background: #e60000;      
+  transform: translateY(-2px); 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+
+.btn-clear:active {
+  background: #990000;        
+  transform: scale(0.95);      
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.contenedor-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
