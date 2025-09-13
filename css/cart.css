@@ -76,11 +76,11 @@ nav ul li a {
   border-radius: 4px;
   transition: all 0.3s ease;
   position: relative;
+  font-size: 20px;
 }
 
 nav ul li a:hover {
-  color: #dc2626;
-  background-color: rgba(220, 38, 38, 0.05);
+  color: #e60000;  
   transform: translateY(-1px);
 }
 
@@ -196,7 +196,12 @@ nav ul li a.active::after {
   border-radius: 8px;
 }
 
-.btn-eliminar {
+.container-btn-eliminar{
+  display: flex;
+  justify-content: end;
+}
+
+.btn-eliminar {  
   background: #b80000;         
   color: #fff;                 
   border: none;
@@ -223,6 +228,10 @@ nav ul li a.active::after {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+.empty-cart-message {
+  font-size: 30px;
+  font-family: "Exo 2", sans-serif;
+}
 .btn-clear {
   background: #b80000;         
   color: #fff;                 
@@ -309,6 +318,7 @@ nav ul li a.active::after {
   padding: 10px;
   border-radius: 5px;
   transition: 0.3s;
+  font-size: 30px;
  }
 
 .socials a:hover {
