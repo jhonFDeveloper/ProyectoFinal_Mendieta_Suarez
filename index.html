@@ -5,24 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Entregable 2 Jhon Fredy Mendieta Suárez</title>
 
-    
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    
     <link
       href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playpen+Sans:wght@100..800&display=swap"
       rel="stylesheet"
     />
 
-    
     <link
       rel="stylesheet"
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
     />
 
-    
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -30,7 +26,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
 
     <link rel="stylesheet" href="/css/main.css" />
   </head>
@@ -48,8 +43,11 @@
             <li class="categoria">
               <a href="/index.html"><i class="fa-solid fa-house"></i></a>
             </li>
-            <li class="categoria">
-              <a href="/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            <li class="categoria cart-container">
+              <a href="/cart.html">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cart-badge" class="cart-badge">0</span>
+              </a>
             </li>
           </ul>
         </nav>
@@ -60,12 +58,13 @@
       <div class="contenedor-productos"></div>
     </main>
 
-    
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-section">
           <h2 class="logo">JF Accesorios Tecnológicos</h2>
-          <p>Tu tienda de confianza en partes y accesorios para computadores.</p>
+          <p>
+            Tu tienda de confianza en partes y accesorios para computadores.
+          </p>
         </div>
 
         <div class="footer-section">
@@ -92,7 +91,9 @@
             <a href="https://github.com/jhonFDeveloper" target="_blank">
               <i class="fa-brands fa-github"></i>
             </a>
-            <a href="https://www.instagram.com/jhonfcompu/?next=%2F"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.instagram.com/jhonfcompu/?next=%2F"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
             <a
               href="https://www.linkedin.com/in/jhon-f-mendieta-4b75b8126/"
               target="_blank"
@@ -111,9 +112,11 @@
       </div>
     </footer>
 
-   
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
     <script src="/js/main.js" defer></script>
   </body>
 </html>

@@ -173,6 +173,26 @@ nav ul li a.active::after {
   }
 }
 
+  .cart-container {
+    position: relative;
+  }
+
+  .cart-badge {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    background: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } 
+
 .contenedor-productos {
   display: flex;
   flex-wrap: wrap;
@@ -227,9 +247,9 @@ nav ul li a.active::after {
 .footer {
   background: #111; 
   color: #fff;      
-  /* padding: 40px 20px; */
   padding-left: 60px;
   padding-top: 20px;
+  padding-bottom: 40px;
   margin-top: 50px;
 }
 
