@@ -77,62 +77,6 @@ const renderProducts = () => {
     container.innerHTML = contenidoHTML;
     attachCheckoutEvent();
     updateCartCount();
-<<<<<<< HEAD
-  }
-};
-
-
-const updateQuantity = (id, newQuantity) => {
-  const productoEnCarrito = cartProducts.find((producto) => producto.id === id);
-  const productoStock = productos.find(p => p.id === id)?.stock || productoEnCarrito.stock;
-
-  if (productoEnCarrito) {
-    newQuantity = parseInt(newQuantity);
-    if (newQuantity <= productoStock) {
-      productoEnCarrito.cantidad = newQuantity;
-      localStorage.setItem("cart", JSON.stringify(cartProducts));
-      renderProducts();      
-    }     
-    updateCartCount();
-  }
-};
-
-
-const removeProduct = (id) => {
-  cartProducts = cartProducts.filter((producto) => producto.id !== id);
-  localStorage.setItem("cart", JSON.stringify(cartProducts));
-  renderProducts();
-};
-
-
-document.getElementById("vaciar").addEventListener("click", () => {
-  localStorage.removeItem("cart");
-  cartProducts = [];
-  renderProducts();
-});
-
-
-const attachCheckoutEvent = () => {
-  const checkoutBtn = document.getElementById('checkout-btn');
-  if (checkoutBtn) {
-    checkoutBtn.addEventListener('click', () => {
-      const total = calculateTotal();
-      Toastify({
-        text: `¡Compra simulada exitosa! Total pagado: $${total}. Tu pedido ha sido procesado.`,
-        duration: 4000,
-        gravity: "bottom",
-        position: "left",
-        style: { background: "linear-gradient(to right, #00b09b, #96c93d)" },
-      }).showToast();
-      localStorage.removeItem("cart");
-      cartProducts = [];
-      renderProducts();
-      setTimeout(() => window.location.href = 'index.html', 2000);
-    });
-  }
-};
-
-=======
   }
 };
 
@@ -210,7 +154,6 @@ const attachCheckoutEvent = () => {
 };
 
 
->>>>>>> 134364d (Se agregan modales de confirmación)
 const updateCartCount = () => {
   const cartCount = document.getElementById('cart-count');
   if (cartCount) {
