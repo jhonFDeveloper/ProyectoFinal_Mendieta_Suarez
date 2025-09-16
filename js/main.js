@@ -2,12 +2,21 @@ let productos = [];
 
 const loadProducts = async () => {
   try {
+<<<<<<< HEAD
     const response = await fetch('js/products.json');
     productos = await response.json();
     renderProducts(); 
   } catch (error) {
     Toastify({
       text: 'Error cargando productos, usando datos locales.',
+=======
+    const response = await fetch("js/products.json");
+    productos = await response.json();
+    renderProducts();
+  } catch (error) {
+    Toastify({
+      text: "Error cargando productos, usando datos locales.",
+>>>>>>> 134364d (Se agregan modales de confirmación)
       duration: 3000,
       gravity: "bottom",
       position: "left",
@@ -44,6 +53,7 @@ const renderProducts = () => {
   }
 };
 
+<<<<<<< HEAD
  let count = 0;
     const badge = document.getElementById("cart-badge");
 
@@ -51,6 +61,15 @@ const renderProducts = () => {
       count++;
       badge.textContent = count;
     }
+=======
+let count = 0;
+const badge = document.getElementById("cart-badge");
+
+function addToCart() {
+  count++;
+  badge.textContent = count;
+}
+>>>>>>> 134364d (Se agregan modales de confirmación)
 
 const addProduct = (id) => {
   const productoEncontrado = productos.find((producto) => producto.id === id);

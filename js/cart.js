@@ -77,6 +77,7 @@ const renderProducts = () => {
     container.innerHTML = contenidoHTML;
     attachCheckoutEvent();
     updateCartCount();
+<<<<<<< HEAD
   }
 };
 
@@ -131,6 +132,85 @@ const attachCheckoutEvent = () => {
   }
 };
 
+=======
+  }
+};
+
+
+const updateQuantity = (id, newQuantity) => {
+  const productoEnCarrito = cartProducts.find((producto) => producto.id === id);
+  const productoStock = productos.find(p => p.id === id)?.stock || productoEnCarrito.stock;
+
+  if (productoEnCarrito) {
+    newQuantity = parseInt(newQuantity);
+    if (newQuantity <= productoStock) {
+      productoEnCarrito.cantidad = newQuantity;
+      localStorage.setItem("cart", JSON.stringify(cartProducts));
+      renderProducts();      
+    }     
+    updateCartCount();
+  }
+};
+
+
+const removeProduct = (id) => {
+  cartProducts = cartProducts.filter((producto) => producto.id !== id);
+  localStorage.setItem("cart", JSON.stringify(cartProducts));
+  renderProducts();
+};
+
+document.getElementById("vaciar").addEventListener("click", () => {
+  Swal.fire({
+    title: '¿Estás seguro?',
+    text: '¿Deseas vaciar el carrito? Esta acción no se puede deshacer.',
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonText: 'Sí',
+    cancelButtonText: 'No',
+    customClass: {
+      popup: 'swal2-popup-custom',
+      title: 'swal2-title-custom',
+      content: 'swal2-content-custom',
+      confirmButton: 'swal2-confirm-custom',
+      cancelButton: 'swal2-cancel-custom'
+    }
+  }).then((result) => {
+    if (result.isConfirmed) {
+      localStorage.removeItem("cart");
+      cartProducts = [];
+      renderProducts();
+    }
+  });
+});
+
+const attachCheckoutEvent = () => {
+  const checkoutBtn = document.getElementById('checkout-btn');
+  if (checkoutBtn) {
+    checkoutBtn.addEventListener('click', () => {
+      const total = calculateTotal();
+      Swal.fire({
+        title: '¡Compra Exitosa!',
+        text: `Total pagado: $${total}. Tu pedido ha sido procesado.`,
+        icon: 'success',
+        confirmButtonText: 'Aceptar',
+        customClass: {
+          popup: 'swal2-popup-custom',
+          title: 'swal2-title-custom',
+          content: 'swal2-content-custom',
+          confirmButton: 'swal2-confirm-custom'
+        }
+      }).then(() => {
+        localStorage.removeItem("cart");
+        cartProducts = [];
+        renderProducts();
+        window.location.href = 'index.html';
+      });
+    });
+  }
+};
+
+
+>>>>>>> 134364d (Se agregan modales de confirmación)
 const updateCartCount = () => {
   const cartCount = document.getElementById('cart-count');
   if (cartCount) {
